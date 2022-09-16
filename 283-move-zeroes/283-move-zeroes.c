@@ -2,7 +2,7 @@
 
 void moveZeroes(int* nums, int numsSize){
     
-    int cnt=0;
+    /*int cnt=0;
     for(int i=0;i<numsSize;i++){
         if(nums[i]!=0)
         {
@@ -28,38 +28,21 @@ void moveZeroes(int* nums, int numsSize){
         else{
             nums[i]=0;
         }
-    }
-    
-    /*int count=0;
-    int size = numsSize;
-    int sub=1;*/
-    
-    /*for(int i=0;i<size-sub;i++)
-    {
-        for(int m=0;m<size;m++){
-            printf("%d ", nums[m]);
-        }
-        printf("\n");
-        printf("%d %d\n", i, size-sub);
-        if(nums[i]==0 && nums[size-sub]!=0)
-        {
-            int temp = nums[i];
-            nums[i] = nums[size-sub];
-            nums[size-sub] = temp;
-            sub+=1;
-            continue;
-        }
-        if(nums[i]==0 && nums[size-sub]==0)
-        {
-            sub+=1;
-            i-=1;
-            continue;
-        }
-        else{
-            continue;
-        }
     }*/
     
     
+    int p=0;
+    
+    for(int i=0;i<numsSize;i++){
+        if(nums[i])
+        {
+            nums[p]=nums[i];
+            p+=1;
+        }
+    }
+    
+    for(;p<numsSize;p++){
+        nums[p]=0;
+    }
     
 }

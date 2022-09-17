@@ -1,7 +1,7 @@
 
 
 int singleNumber(int* nums, int numsSize){
-    int num = 3*10000;
+    /*int num = 3*10000;
     int* arrays=malloc(sizeof(int)*num*2);
     
     for(int i=0;i<num;i++){
@@ -24,5 +24,12 @@ int singleNumber(int* nums, int numsSize){
         }
     }
     
-    return answ;
+    return answ;*/
+    
+    
+    for(int i=1;i<numsSize;i++)
+    {
+        nums[0]^=nums[i];
+    }
+    return nums[0];
 }

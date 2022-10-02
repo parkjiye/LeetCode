@@ -7,11 +7,6 @@ int lengthOfLongestSubstring(char * s){
     int count = 0;
     int ans=0;
     
-    if(strlen(s)==1)
-    {
-        return 1;
-    }
-    
     for(int i=0;i<128;i++)
     {
         check[i]=0;
